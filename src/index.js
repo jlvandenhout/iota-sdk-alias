@@ -56,6 +56,7 @@ async function run() {
       alias: "Alice",
     });
     console.log("Generated new account:", account.getMetadata().alias);
+    account.setDefaultSyncOptions({ syncOnlyMostBasicOutputs: true });
 
     // Request funds.
     const faucetUrl = process.env.FAUCET_URL;
@@ -68,10 +69,15 @@ async function run() {
     ).requestFundsFromFaucet(faucetUrl, address);
     console.log("Faucet response:\n", faucetResponse);
 
-    // Create an alias.
-    // May want to ensure the account is synced before sending a transaction.
     let balance = await account.sync();
+    while (!balance.baseCoin.available) {
+      // Check for balance every second.
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      balance = await account.sync();
+    }
+    console.log("Balance:\n", balance);
 
+    // Create an alias.
     console.log(
       `Aliases BEFORE (${balance.aliases.length}):\n`,
       balance.aliases
