@@ -1,0 +1,7 @@
+{
+  "name": "iota-sdk-alias",
+  "packageManager": "yarn@3.5.1",
+  "dependencies": {
+    "@iota/sdk": "^1.0.5"
+  }
+}
