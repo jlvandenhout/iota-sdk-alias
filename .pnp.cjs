@@ -28,7 +28,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@iota/sdk", "npm:1.0.5"]\
+            ["@iota/sdk", "npm:1.0.5"],\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -445,6 +446,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["dotenv", [\
+        ["npm:16.3.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-15d75e7279.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["eastasianwidth", [\
         ["npm:0.2.0", {\
           "packageLocation": "./.yarn/cache/eastasianwidth-npm-0.2.0-c37eb16bd1-7d00d7cd8e.zip/node_modules/eastasianwidth/",\
@@ -757,7 +767,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["iota-sdk-alias", "workspace:."],\
-            ["@iota/sdk", "npm:1.0.5"]\
+            ["@iota/sdk", "npm:1.0.5"],\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "SOFT"\
         }]\

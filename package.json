@@ -1,7 +1,14 @@
 {
   "name": "iota-sdk-alias",
+  "type": "module",
   "packageManager": "yarn@3.5.1",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "yarn node ./src/index.js",
+    "clean": "yarn node ./src/clean"
+  },
   "dependencies": {
-    "@iota/sdk": "^1.0.5"
+    "@iota/sdk": "^1.0.5",
+    "dotenv": "^16.3.1"
   }
 }
