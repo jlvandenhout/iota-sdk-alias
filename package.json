@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "yarn node ./src/index.js",
+    "original": "yarn node ./src/original.js",
     "clean": "yarn node ./src/clean"
   },
   "dependencies": {
